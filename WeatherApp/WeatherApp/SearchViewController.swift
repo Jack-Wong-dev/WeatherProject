@@ -255,3 +255,7 @@ extension UITextField {
     @objc func doneButtonTapped() { self.resignFirstResponder() }
     @objc func cancelButtonTapped() { self.resignFirstResponder() }
 }
+
+extension SearchViewController{
+    
+}
