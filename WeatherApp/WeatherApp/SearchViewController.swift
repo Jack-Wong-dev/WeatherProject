@@ -10,6 +10,28 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    private var locationName = ""
+    private var latitude = ""
+    private var longitude = ""
+    
+    private var allWeather = [Forecast]() {
+        didSet {
+            self.weatherCollectionView.reloadData()
+        }
+    }
+    
+    private var searchString: String? {
+        didSet {
+            loadLatLongFromZip()
+            self.weatherCollectionView.reloadData()
+            
+            if let searchString = searchString {
+                UserDefaultsWrapper.manager.store(searchString: searchString)
+            }
+        }
+    }
+    
+    
     lazy var weatherLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -41,28 +63,6 @@ class SearchViewController: UIViewController {
         textField.placeholder = "Enter ZipCode"
         return textField
     }()
-    
-    private var allWeather = [Forecast]() {
-        didSet {
-            self.weatherCollectionView.reloadData()
-        }
-    }
-    
-    private var searchString: String? {
-        didSet {
-            loadLatLongFromZip()
-            self.weatherCollectionView.reloadData()
-            
-            if let searchString = searchString {
-                UserDefaultsWrapper.manager.store(searchString: searchString)
-            }
-        }
-    }
-    
-    private var locationName = ""
-    private var latitude = ""
-    private var longitude = ""
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -256,6 +256,3 @@ extension UITextField {
     @objc func cancelButtonTapped() { self.resignFirstResponder() }
 }
 
-extension SearchViewController{
-    
-}

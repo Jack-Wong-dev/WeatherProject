@@ -93,6 +93,7 @@
 			children = (
 				0ACB06062359567F00272B54 /* Image.swift */,
 				0ACB06082359569F00272B54 /* Weather.swift */,
+				0ACB06132359609000272B54 /* WeatherCollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,7 +136,6 @@
 				548CE067234D340700B5177D /* Assets.xcassets */,
 				548CE05F234D33B600B5177D /* Info.plist */,
 				0AC0DBA8234FC6A500B26001 /* SearchViewController.swift */,
-				0ACB06132359609000272B54 /* WeatherCollectionViewCell.swift */,
 				0ACB063D235BD7E300272B54 /* Secrets.swift */,
 			);
 			path = WeatherApp;
