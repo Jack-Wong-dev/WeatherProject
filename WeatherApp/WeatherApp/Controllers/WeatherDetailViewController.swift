@@ -110,21 +110,22 @@ class WeatherDetailViewController: UIViewController {
     }()
     
     private enum SavedAlready {
-         case yes
-         case no
-     }
+        case yes
+        case no
+    }
     
     @objc func saveToFavorites(sender: UIBarButtonItem){
         if let existsInFavorites = imageView.existsInFavorites() {
             switch existsInFavorites {
             case false:
+                print("Saving to favorites")
                 do {
                     try ImagePersistenceHelper.manager.save(newImage: imageView)
                 } catch {
                     print(error)
                 }
             case true:
-               print("saved")
+                print("Already saved")
             }
         }
     }
@@ -143,8 +144,6 @@ class WeatherDetailViewController: UIViewController {
         setChosenLocationLabelConstraints()
         setImageConstraints()
         setStackViewConstraints()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {

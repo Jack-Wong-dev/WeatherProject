@@ -22,6 +22,7 @@
 		0ACB060F2359575700272B54 /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB060E2359575700272B54 /* ImageAPIClient.swift */; };
 		0ACB06142359609000272B54 /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB06132359609000272B54 /* WeatherCollectionViewCell.swift */; };
 		0ACB063E235BD7E300272B54 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB063D235BD7E300272B54 /* Secrets.swift */; };
+		0ACB0640235C963D00272B54 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB063F235C963D00272B54 /* FavoriteTableViewCell.swift */; };
 		548CE052234D33B500B5177D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CE051234D33B500B5177D /* AppDelegate.swift */; };
 		548CE054234D33B500B5177D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CE053234D33B500B5177D /* SceneDelegate.swift */; };
 		548CE05E234D33B600B5177D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548CE05C234D33B600B5177D /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 		0ACB060E2359575700272B54 /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
 		0ACB06132359609000272B54 /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		0ACB063D235BD7E300272B54 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		0ACB063F235C963D00272B54 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		548CE04E234D33B500B5177D /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		548CE051234D33B500B5177D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		548CE053234D33B500B5177D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +95,6 @@
 			children = (
 				0ACB06062359567F00272B54 /* Image.swift */,
 				0ACB06082359569F00272B54 /* Weather.swift */,
-				0ACB06132359609000272B54 /* WeatherCollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,10 +102,20 @@
 		0ACB061223595C9200272B54 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0AC0DBA5234FC66100B26001 /* FavoriteViewController.swift */,
 				0AC0DBAA234FD2AA00B26001 /* WeatherDetailViewController.swift */,
+				0AC0DBA8234FC6A500B26001 /* SearchViewController.swift */,
+				0AC0DBA5234FC66100B26001 /* FavoriteViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0ACB0641235C966700272B54 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB06132359609000272B54 /* WeatherCollectionViewCell.swift */,
+				0ACB063F235C963D00272B54 /* FavoriteTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		548CE045234D33B500B5177D = {
@@ -126,6 +137,7 @@
 		548CE050234D33B500B5177D /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				0ACB0641235C966700272B54 /* Cells */,
 				0ACB061223595C9200272B54 /* Controllers */,
 				0ACB06052359567600272B54 /* Model */,
 				0ACB05F82357F6F200272B54 /* Persistence */,
@@ -135,7 +147,6 @@
 				548CE05C234D33B600B5177D /* LaunchScreen.storyboard */,
 				548CE067234D340700B5177D /* Assets.xcassets */,
 				548CE05F234D33B600B5177D /* Info.plist */,
-				0AC0DBA8234FC6A500B26001 /* SearchViewController.swift */,
 				0ACB063D235BD7E300272B54 /* Secrets.swift */,
 			);
 			path = WeatherApp;
@@ -214,6 +225,7 @@
 				0AC0DBAB234FD2AA00B26001 /* WeatherDetailViewController.swift in Sources */,
 				0ACB063E235BD7E300272B54 /* Secrets.swift in Sources */,
 				0ACB06092359569F00272B54 /* Weather.swift in Sources */,
+				0ACB0640235C963D00272B54 /* FavoriteTableViewCell.swift in Sources */,
 				0ACB060F2359575700272B54 /* ImageAPIClient.swift in Sources */,
 				0ACB05FA2359558A00272B54 /* PersistenceManager.swift in Sources */,
 				0ACB06142359609000272B54 /* WeatherCollectionViewCell.swift in Sources */,
